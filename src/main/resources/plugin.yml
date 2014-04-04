@@ -5,3 +5,9 @@ load: startup
 author: brutuscat2
 website: https://brutuscat.net
 description: "Lags your server when you say lag"
+commands:
+  lbreload:
+    description: Reload plugin configuration
+    usage: /reload
+    permission: lagbox.reload
+    permission-message: You don't have permissions for this command.
