@@ -1,0 +1,7 @@
+name: LagBox
+main: net.brutuscat.LagBox.LagBox
+version: 1.0
+load: startup
+author: brutuscat2
+website: https://brutuscat.net
+description: "Lags your server when you say lag"
