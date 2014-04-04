@@ -12,7 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class LagBox extends JavaPlugin implements Listener {
 
     final String m = LagBox.this.getConfig().getString("message");
-    final int lt = 1000;
+    final int lt = LagBox.this.getConfig().getInt("lagtime");
 
     @Override
     public void onEnable() {
