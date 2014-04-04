@@ -35,12 +35,14 @@ public class LagBox extends JavaPlugin implements Listener {
             }
         }
     }
-    /*
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (cmd.getName().equalsIgnoreCase("reload")) {
-    // Add reload code
+    if (cmd.getName().equalsIgnoreCase("lbreload")) {
+        System.out.println(ChatColor.AQUA + "Reloading configuration..");
+        final String m = LagBox.this.getConfig().getString("message");
+        final int lt = LagBox.this.getConfig().getInt("lagtime");
+        System.out.println(ChatColor.AQUA + "LagBox successfully reloaded.");
+    } return true;
     }
-    }
-    */
 }
