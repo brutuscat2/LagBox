@@ -14,7 +14,7 @@ public class LagBox extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(this, this);
         this.saveDefaultConfig();
         String lt = new String(LagBox.this.getConfig().getString("lagtime"));
-        String m = new String(LagBox.this.getConfig().getString("message"));
+        String m == LagBox.this.getConfig().getString("message");
     }
 
     @Override
