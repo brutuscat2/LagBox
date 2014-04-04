@@ -29,4 +29,10 @@ public class LagBox extends JavaPlugin {
             }
         }
     }
+    @Override
+        public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+	if (cmd.getName().equalsIgnoreCase("reload")) {
+		// Add reload code
+	}
+    }
 }
