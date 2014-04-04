@@ -1,0 +1,5 @@
+# LagBox Config
+# All times are in milliseconds
+# Do not set the lagtime value to a large value, you may trigger the Spigot watchdog
+lagtime: 1000
+message: "I'm the one who lagged the server, blame me!"
