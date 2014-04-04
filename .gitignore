@@ -6,7 +6,7 @@
 /repo
 
 # vim
-.*.sw[a-p]
+.*.swp
 
 # various other potential build files
 /build
