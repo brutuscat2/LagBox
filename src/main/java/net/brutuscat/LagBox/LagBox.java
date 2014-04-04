@@ -16,7 +16,7 @@ public class LagBox extends JavaPlugin {
         String m;
         String lt;
         lt = "LagBox.this.getConfig().getString("lagtime")";
-        m = "LagBox.this.getConfig().getString("message")"";
+        m = "LagBox.this.getConfig().getString("message")";
     }
 
     @Override
