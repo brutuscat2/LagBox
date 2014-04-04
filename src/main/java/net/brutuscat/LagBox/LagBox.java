@@ -25,7 +25,7 @@ public class LagBox extends JavaPlugin {
     public void onPlayerChat(AsyncPlayerChatEvent e) {
         if(e.getMessage().equalsIgnoreCase("lag")) {
             try {
-                e.setMessage(ChatColor.DARK_RED "m");
+                e.setMessage(ChatColor.DARK_RED + "" + m);
                 Thread.sleep(lt);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
