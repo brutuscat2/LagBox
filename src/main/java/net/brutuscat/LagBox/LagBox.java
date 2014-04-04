@@ -14,6 +14,7 @@ public class LagBox extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(this, this);
         this.saveDefaultConfig();
         String lt = LagBox.this.getConfig().getString("lagtime");
+        String m = LagBox.this.getConfig().getString("message");
     }
 
     @Override
@@ -24,7 +25,7 @@ public class LagBox extends JavaPlugin {
     public void onPlayerChat(AsyncPlayerChatEvent e) {
         if(e.getMessage().equalsIgnoreCase("lag")) {
             try {
-                e.setMessage(ChatColor.DARK_RED + "I'm the one who lagged the server, blame me!");
+                e.setMessage(ChatColor.DARK_RED + m);
                 Thread.sleep(lt);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
