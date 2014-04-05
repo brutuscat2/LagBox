@@ -26,7 +26,7 @@ public class LagBox extends JavaPlugin implements Listener {
             getConfig().addDefault("lagtime", 1000);
             getConfig().addDefault("lagchat", Boolean.TRUE);
             getConfig().addDefault("message", "I'm the one who lagged the server, blame me!");
-            getConfig().options().copyDefaults(false);
+            getConfig().options().copyDefaults(true);
             saveConfig();
         }
     }
