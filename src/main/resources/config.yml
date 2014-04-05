@@ -1,7 +1,7 @@
 # LagBox Config
 # All times are in milliseconds
 # CHANGING THE VERSION VALUE WILL RESULT IN A CONFIG WIPE.
-version: 102
+version: 104
 lagtime: 1000
 lagchat: true
 message: "I'm the one who lagged the server, blame me!"

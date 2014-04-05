@@ -14,8 +14,8 @@ public class LagBox extends JavaPlugin implements Listener {
     final String m = LagBox.this.getConfig().getString("message", "I'm the one who lagged the server, blame me!");
     final int lt = LagBox.this.getConfig().getInt("lagtime", 1000);
     final int v = LagBox.this.getConfig().getInt("version");
-    final int lv = 103 - 1;
-    final int vn = 103;
+    final int lv = 104 - 1;
+    final int vn = 104;
     final boolean c = LagBox.this.getConfig().getBoolean("lagchat", true);
 
     @Override
@@ -31,7 +31,7 @@ public class LagBox extends JavaPlugin implements Listener {
                 saveConfig();
             }
             else {
-                getConfig().addDefault("version", vn);
+                getConfig().set("version", vn);
                 saveConfig();
             }
         }
