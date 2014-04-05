@@ -11,8 +11,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class LagBox extends JavaPlugin implements Listener {
 
-    final String m = LagBox.this.getConfig().getString("message");
-    final int lt = LagBox.this.getConfig().getInt("lagtime");
+    final String m = LagBox.this.getConfig().getString("message", "I'm the one who lagged the server, blame me!");
+    final int lt = LagBox.this.getConfig().getInt("lagtime", 1000);
 
     @Override
     public void onEnable() {
@@ -28,7 +28,8 @@ public class LagBox extends JavaPlugin implements Listener {
     public void onPlayerChat(AsyncPlayerChatEvent e) {
         if(e.getMessage().equalsIgnoreCase("lag")) {
             try {
-                e.setMessage(ChatColor.DARK_RED + this.m);
+                if(m != null && m != "")
+                    e.setMessage(ChatColor.DARK_RED + this.m);
                 Thread.sleep(this.lt);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
