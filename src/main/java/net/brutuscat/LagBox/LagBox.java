@@ -12,10 +12,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class LagBox extends JavaPlugin implements Listener {
 
     final String m = LagBox.this.getConfig().getString("message", "I'm the one who lagged the server, blame me!");
+    final String cc = LagBox.this.getConfig().getString("chatcolor", "ChatColor.DARK_RED");
     final int lt = LagBox.this.getConfig().getInt("lagtime", 1000);
     final int v = LagBox.this.getConfig().getInt("version");
-    final int lv = 104 - 1;
-    final int vn = 104;
+    final int lv = 105 - 1;
+    final int vn = 105;
     final boolean c = LagBox.this.getConfig().getBoolean("lagchat", true);
 
     @Override
@@ -28,6 +29,7 @@ public class LagBox extends JavaPlugin implements Listener {
                 getConfig().set("lagtime", 1000);
                 getConfig().set("lagchat", Boolean.TRUE);
                 getConfig().set("message", "I'm the one who lagged the server, blame me!");
+                getConfig().set("chatcolor", "ChatColor.DARK_RED");
                 saveConfig();
             }
             else {
@@ -46,7 +48,7 @@ public class LagBox extends JavaPlugin implements Listener {
         if(e.getMessage().equalsIgnoreCase("lag")) {
             try {
                 if(m != null && m != "")
-                    e.setMessage(ChatColor.DARK_RED + this.m);
+                    e.setMessage(cc + this.m);
                 if(c != false)
                     Thread.sleep(this.lt);
             } catch (InterruptedException ex) {
